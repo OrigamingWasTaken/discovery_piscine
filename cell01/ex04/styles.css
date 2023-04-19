@@ -1,0 +1,14 @@
+table {
+    border-collapse: collapse;
+    width: 30%;
+}
+
+table, th {
+    border: 1px solid black;
+}
+
+th {
+    height: 70px;
+    text-align: left;
+    font-size: 70%;
+}
