@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="background.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Bouton Couleur</title>
+</head>
+<body>
+    <button onclick="onClick()">Click me</button>
+    <script>
+        $("button").click(function() {
+            $("body").css("background-color",'#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0'))
+        })
+    </script>
+</body>
+</html>

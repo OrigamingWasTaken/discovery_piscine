@@ -7,9 +7,9 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     width: 70%;
-    height: 100vw;
+    height: 50%;
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%,-50%);
 
@@ -24,13 +24,14 @@
     background-color: rgb(111, 222, 111);
     
     position: absolute;
-    left: 79.6%;
-    top: 7%;
+    left: 79%;
+    top: 7.5%;
+    z-index: 1;
 }
 
 #title {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
-    font-size: 50px;
+    font-size: 3em;
     text-align: center;
     margin-top: 10%;
 }
@@ -38,15 +39,15 @@
 .todo {
     width: 70vw;
     height: 5vh;
-    margin-top: 3px;
+    margin-top: 1%;
     background-color: rgb(230, 230, 230);
+    text-align: center;
 }
 
 .todo h2 {
     text-align: center;
     font-family: Minecraft;
     font-size: 20px;
-    margin-top: 4.5%;
 }
 
 .todo:hover {

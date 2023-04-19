@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="background.css">
+    <title>Bouton Couleur</title>
+</head>
+<body>
+    <button onclick="onClick()">Click me</button>
+    <script>
+        function onClick() {
+            document.body.style.backgroundColor = '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0')
+        }
+    </script>
+</body>
+</html>
