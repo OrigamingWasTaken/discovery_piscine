@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    text-align: center;
+}
+
+.grid-container {
+    display: flex;
+}
+
+#copyrights p{
+    text-align: right;
+}
+
+body {
+    background-color: pink;
+}

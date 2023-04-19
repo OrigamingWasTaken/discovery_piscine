@@ -1,0 +1,38 @@
+.dropdownbtn {
+    color: white;
+    background-color: #00a79c;
+    padding: 2% 4%;
+    font-size: 20px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10% 20%;
+    display: block;
+    text-decoration: none;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 15.65%;
+    z-index: 1;
+}
+
+h1,p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown:hover .dropdownbtn{background-color: #00766e;}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content{display: block;}
