@@ -3,10 +3,10 @@ function calc(fn) {
 }
 
 function onClick() {
-    let input1 = $(".first_input").val()
-    let input2 = $(".second_input").val()
-    let operator = $(".operation").val()
-    let result = $(".first_input")
+    let input1 = $("#first_input").val()
+    let input2 = $("#second_input").val()
+    let operator = $("#operation").val()
+    let result = $("#result")
 
     if (parseInt(input1) < 0 || parseInt(input2) < 0) {
         alert("Error :(")
@@ -31,7 +31,9 @@ function useMe() {
     alert("Please, use me...")
 }
 
-$(".result").click(onClick())
+$(".result_btn").click(function() {
+    onClick($(this))
+})
 
 setInterval(() => {
     useMe()
