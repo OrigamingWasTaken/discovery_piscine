@@ -96,19 +96,49 @@ window.addEventListener("mousemove", (e) => {
     })
 })
 
-const linkVis = (bool) => {
-    const imgBtns = document.querySelectorAll(".imgbtn")
-    const arDis = ["none","block"]
+const linkVis = (el,bool) => {
+    const imgBtns = el
     imgBtns.forEach(function(element) {
-        element.style.display = arDis[+bool]
+        if (bool) {
+            if (!element.classList.contains("hide")) {
+                element.classList.toggle("hide")
+            }
+        } else {
+            if (element.classList.contains("hide")) {
+                element.classList.remove("hide")
+            }
+        }
     })
 }
 
-window.addEventListener("mouseover", (e) => {
+const disVis = (el,bool) => {
+    const imgBtns = el
+    imgBtns.forEach(function(element) {
+        if (bool) {
+            if (!element.classList.contains("hide-ds")) {
+                element.classList.toggle("hide-ds")
+            }
+        } else {
+            if (element.classList.contains("hide-ds")) {
+                element.classList.remove("hide-ds")
+            }
+        }
+    })
+}
+
+window.addEventListener("mousemove", (e) => {
     const neptune = document.getElementById("neptune")
+    const hitbox = document.getElementById("hitbox")
+    const elements = document.querySelectorAll(".imgbtn")
     if (neptune.matches(":hover")) {
-        linkVis(true)
+        linkVis(elements,true)
     } else {
-        linkVis(false)
+        linkVis(elements,false)
     }
+})
+
+const skillButtons = document.getElementById("skills")
+skillButtons.addEventListener("click", function(e) {
+    const bt = document.querySelectorAll("#bt")
+    disVis(bt,false)
 })
