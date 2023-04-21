@@ -104,14 +104,6 @@ canvas {
   transform: scale(3,3);
 }
 
-#neptune:hover div,img {
-  visibility: visible;
-}
-
-#neptune:not(:hover) div,img {
-  transition: 0.1s linear;
-}
-
 #neptune:not(:hover) {
   transition: 0.1s linear;
 }

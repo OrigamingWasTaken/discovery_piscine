@@ -95,3 +95,20 @@ window.addEventListener("mousemove", (e) => {
         element.style.transform = transform;
     })
 })
+
+const linkVis = (bool) => {
+    const imgBtns = document.querySelectorAll(".imgbtn")
+    const arDis = ["none","block"]
+    imgBtns.forEach(function(element) {
+        element.style.display = arDis[+bool]
+    })
+}
+
+window.addEventListener("mouseover", (e) => {
+    const neptune = document.getElementById("neptune")
+    if (neptune.matches(":hover")) {
+        linkVis(true)
+    } else {
+        linkVis(false)
+    }
+})
