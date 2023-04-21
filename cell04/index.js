@@ -81,7 +81,7 @@ window.addEventListener("mousemove", (e) => {
     const mousePosY = e.clientY
 
     parElements.forEach(function(element) {
-        if (element.matches(":hover")) { return }
+        //if (element.matches(":hover")) { return }
         var direction = 1;
         var force = 0.01;
         var depth = element.getAttribute('data-speed');
