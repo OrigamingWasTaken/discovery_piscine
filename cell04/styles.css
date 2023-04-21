@@ -55,11 +55,6 @@ canvas {
   opacity: 100;
 }
 
-.hide-ds img,h1,h2,h3 {
-  transition: 0.1s linear;
-  opacity: 0;
-}
-
 #sun {
   position: fixed;
   top: 10%;

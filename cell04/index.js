@@ -111,21 +111,6 @@ const linkVis = (el,bool) => {
     })
 }
 
-const disVis = (el,bool) => {
-    const imgBtns = el
-    imgBtns.forEach(function(element) {
-        if (bool) {
-            if (!element.classList.contains("hide-ds")) {
-                element.classList.toggle("hide-ds")
-            }
-        } else {
-            if (element.classList.contains("hide-ds")) {
-                element.classList.remove("hide-ds")
-            }
-        }
-    })
-}
-
 window.addEventListener("mousemove", (e) => {
     const neptune = document.getElementById("neptune")
     const hitbox = document.getElementById("hitbox")
@@ -137,8 +122,30 @@ window.addEventListener("mousemove", (e) => {
     }
 })
 
-const skillButtons = document.getElementById("skills")
-skillButtons.addEventListener("click", function(e) {
-    const bt = document.querySelectorAll("#bt")
-    disVis(bt,false)
+const skillButton = document.getElementById("skills")
+const gitButton = document.getElementById("contacts")
+
+const skills = document.getElementById("st")
+const basic = document.getElementById("bt")
+
+skillButton.addEventListener("click", function(e) {
+    skills.children.forEach(function(element) {
+        element.classList.remove("hide")
+    })
+    basic.children.forEach(function(element) {
+        element.classList.toggle("hide")
+    })
+})
+
+skillButton.addEventListener("click", function(e) {
+    skills.children.forEach(function(element) {
+        element.classList.toggle("hide")
+    })
+    basic.children.forEach(function(element) {
+        element.classList.remove("hide")
+    })
+})
+
+gitButton.addEventListener("click",function() {
+    window.open("https://github.com/OrigamingWasTaken")
 })
