@@ -31,6 +31,36 @@ canvas {
   top: -7%;
 }
 
+#skills {
+  position: absolute;
+  left: 20%;
+  top: -13%;
+}
+
+#neptune {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+
+  border-radius:50%;
+  height:10vw;
+  width:10vw;
+  background:rgb(0, 157, 255);
+  box-shadow: 0 0 10px rgb(0, 157, 255),
+                0 0 60px rgb(0, 157, 255),
+                0 0 200px rgb(0, 208, 255),
+                inset 0 0 80px rgb(0, 208, 255);
+}
+
+/*Neptune*/
+
+#neptune:hover {
+  transition: 0.1s linear;
+  filter: drop-shadow(0 0 0.5rem rgb(0, 88, 189));
+}
+
 /*He do be ballin*/
 
 #about:hover {
@@ -49,3 +79,25 @@ canvas {
   transform: scale(0.4,0.4);
   transition: 0.1s linear;
 }
+
+/*Computer (skills)*/
+
+#skills:hover {
+  transform: scale(0.3,0.3);
+  transition: 0.1s linear;
+  filter: drop-shadow(0 0 2rem rgb(235, 237, 147));
+}
+
+#skills:active {
+  transform: scale(0.27,0.27);
+  transition: 0.0.5s linear;
+  filter: drop-shadow(0 0 2rem rgb(235, 237, 147));
+}
+
+#skills:not(:hover) {
+  transform: scale(0.23,0.23);
+  transition: 0.1s linear;
+}
+
+/*Contacts*/
+

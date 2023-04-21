@@ -62,6 +62,8 @@ const handleMouse = e => {
     })
 }
 
+window.onmousemove = handleMouse
+
 window.onload = () => {
     createStars(starCount)
     handleMouse({
@@ -72,17 +74,24 @@ window.onload = () => {
 
 // Images animations
 
-const speed = 1
+window.addEventListener("mousemove", (e) => {
+    const parElements = document.querySelectorAll(".mousePar")
 
-const moveImages = () => {
-    const images = document.getElementsByClassName("imgbtn")
-    console.log(images)
-    images.forEach(() => {
-        console.log(image.style.top)
+    const mousePosX = e.clientX
+    const mousePosY = e.clientY
+
+    parElements.forEach(function(element) {
+        if (element.matches(":hover")) { return }
+        var direction = 1;
+        var force = 0.01;
+        var depth = element.getAttribute('data-speed');
+        var width = window.innerWidth/2;
+        var height = window.innerHeight/2;
+        var mouseX = e.clientX;
+        var mouseY = e.clientY;
+        var tx = (mouseX - width) * force * direction * depth;
+        var ty = (mouseY - height) * force * direction * depth;
+        var transform = `translate(${tx}%, ${ty}%)`;
+        element.style.transform = transform;
     })
-}
-
-window.onmousemove = (e) => {
-    handleMouse(e)
-    moveImages()
-}
+})
